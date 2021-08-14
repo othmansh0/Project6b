@@ -83,8 +83,16 @@ class ViewController: UIViewController {
            //label.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
             label.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
             label.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-            label.heightAnchor.constraint(equalToConstant: 88).isActive = true
-
+           
+            label.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 0).isActive = true
+            label.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 0).isActive = true
+            
+            
+           // label.heightAnchor.constraint(equalToConstant: 88).isActive = true
+            
+            label.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.2, constant: -10).isActive = true
+            
+            
             if let previous = previous {
                 // we have a previous label – create a height constraint
                 //combines a different anchor with a constant value (10) to get spacing between the views
